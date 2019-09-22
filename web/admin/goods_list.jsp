@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.totoro.model.Goods" %>
 <%@ page import="java.util.ArrayList" %><%--
@@ -25,17 +26,22 @@
     <tr>
         <th>名称</th><th>描述</th><th>价格</th><th>库存</th><th>操作</th>
     </tr>
-    <%
-        List<Goods> goods= (ArrayList)request.getAttribute("goods");
-        for (Goods g:goods
-             ) {
-            %>
-            <tr>
-                <th><%=g.getName()%></th><th><%=g.getDes()%></th><th><%=g.getPrice()%></th><th><%=g.getInventory()%></th><th>修改，删除</th>
-            </tr>
-            <%
-        }
-    %>
+    <c:forEach items="${goods}" var="g">
+        <tr>
+            <th>${g.name}</th><th>${g.des}</th><th>g.price</th><th>g.inventory</th>
+        </tr>
+    </c:forEach>
+    <%--<%--%>
+        <%--List<Goods> goods= (ArrayList)request.getAttribute("goods");--%>
+        <%--for (Goods g:goods--%>
+             <%--) {--%>
+            <%--%>--%>
+            <%--<tr>--%>
+                <%--<th><%=g.getName()%></th><th><%=g.getDes()%></th><th><%=g.getPrice()%></th><th><%=g.getInventory()%></th><th>修改，删除</th>--%>
+            <%--</tr>--%>
+            <%--<%--%>
+        <%--}--%>
+    <%--%>--%>
 </table>
 
 </body>

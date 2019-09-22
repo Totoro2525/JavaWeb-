@@ -35,6 +35,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.38" level="application_server_libraries" />
-    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="fastjson-1.2.60" level="project" />
   </component>
 </module>
