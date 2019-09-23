@@ -28,7 +28,7 @@
     </tr>
     <c:forEach items="${goods}" var="g">
         <tr>
-            <th>${g.name}</th><th>${g.des}</th><th>g.price</th><th>g.inventory</th>
+            <th>${g.name}</th><th>${g.des}</th><th>${g.price}</th><th>${g.inventory}</th><th>修改，删除</th>
         </tr>
     </c:forEach>
     <%--<%--%>

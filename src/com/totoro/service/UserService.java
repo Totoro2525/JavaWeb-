@@ -12,4 +12,7 @@ public class UserService {
         UserDao userDao=new UserDao();
         return userDao.getUserByUP(username,password);
     }
+    public boolean isExit(String username){
+        return  (new UserDao()).isExist(username);
+    }
 }
